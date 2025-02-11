@@ -1,6 +1,6 @@
 CTG Data Processing Documentation:
 
-Data Cleaning:
+Data Loading:
 -
 - I identified all the CSV files in the given directory using os.listdir(), making sure to filter for files that end with .csv so I only process relevant data.
 - I used csv.reader to open each file and read its content.
@@ -14,4 +14,8 @@ Data Cleaning:
 
 Data Cleaning:
 -
-- 
+- I identified four major data issues that needed to be addressed: 
+  1. Invalid Prices or Volumes: Some trades had prices or volumes that were zero or negative, which are not possible in real market transactions. I iterated through the dataset and used an if condition to check if the price was <= 0 or if the volume was <= 0. If either condition was met, the row was skipped to ensure only valid trades were processed.
+  2. Duplicate Entries: Some rows appeared more than once, which could distort analysis if not handled. For this, I stored processed trades in a set() using (timestamp, price, volume) as the key. Before adding a new row, I checked if it was already present in the set. This ensured only unique rows were retained.
+  3. Corrupt or Incomplete Rows: Some rows had missing values, which could cause errors when processing. A try-except block was implemented when reading and processing each row to catch any errors due to missing or malformed data. If an error occurred (e.g., ValueError when converting strings to numbers), the row was skipped.
+  4. Timestamp Inconsistencies: I saw some trades were not always in chronological order, which could impact time-series analysis from what I know. After cleaning, I sorted the dataset using Python’s sorted() function to ensure all trades appeared in chronological order.
