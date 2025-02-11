@@ -47,12 +47,12 @@ Data Interface:
   - If no trades exist within the specified time range, I display a message instead of generating an empty file.
  
 - Assumptions & Limitations
- - I assume that all timestamps in the dataset are in chronological order; otherwise, sorting is required.
- - The interface is optimized for large datasets but may slow down if the interval is extremely short (e.g., "1s").
- - I currently output only CSV files, but additional formats like JSON could be added later.
+  - I assume that all timestamps in the dataset are in chronological order; otherwise, sorting is required.
+  - The interface is optimized for large datasets but may slow down if the interval is extremely short (e.g., "1s").
+  - I currently output only CSV files, but additional formats like JSON could be added later.
 
 - Usage Example
- - A user wants to generate OHLCV bars for "15m" intervals between "2024-02-01 09:30:00" and "2024-02-01 16:00:00".
- - I process the data, group trades into 15-minute intervals, calculate OHLCV values, and export the results as a CSV file.
- - The user can then load this file into their analysis tools for further evaluation.
+  - A user wants to generate OHLCV bars for "15m" intervals between "2024-02-01 09:30:00" and "2024-02-01 16:00:00".
+  - I process the data, group trades into 15-minute intervals, calculate OHLCV values, and export the results as a CSV file.
+  - The user can then load this file into their analysis tools for further evaluation.
 
