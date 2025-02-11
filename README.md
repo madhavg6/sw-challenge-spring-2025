@@ -12,7 +12,7 @@ Data Loading:
 - Challenges: One issue I had was dealing with corrupt or incomplete data as some rows were missing values or had incorrect formatting. I solved this by using a try-except block to catch errors and skip problematic rows without crashing the program. Ensuring timestamp consistency was also important, so I used datetime.strptime() to standardize all timestamps, making it easier to sort and aggregate the data later.
 
 
-Data Cleaning:
+Data Cleaning Report:
 -
 - I identified four major data issues that needed to be addressed: 
   1. Invalid Prices or Volumes: Some trades had prices or volumes that were zero or negative, which are not possible in real market transactions. I iterated through the dataset and used an if condition to check if the price was <= 0 or if the volume was <= 0. If either condition was met, the row was skipped to ensure only valid trades were processed.
