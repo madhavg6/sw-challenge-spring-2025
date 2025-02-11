@@ -37,9 +37,9 @@ Data Interface:
 - Output Generation
   - I save the aggregated OHLCV data as a CSV file with the following format:
     
-    timestamp,open,high,low,close,volume
-    2024-02-01 09:30:00,100.5,101.0,99.5,100.0,20
-    2024-02-01 09:30:10,100.0,100.8,99.2,100.5,15
+    - timestamp,open,high,low,close,volume
+    - 2024-02-01 09:30:00,100.5,101.0,99.5,100.0,20
+    - 2024-02-01 09:30:10,100.0,100.8,99.2,100.5,15
 
 - Error Handling & Validation
  - I check if the time interval input follows the correct format and alert the user if it's invalid.
