@@ -42,9 +42,9 @@ Data Interface:
     - 2024-02-01 09:30:10,100.0,100.8,99.2,100.5,15
 
 - Error Handling & Validation
- - I check if the time interval input follows the correct format and alert the user if it's invalid.
- - If the start or end datetime is missing or incorrect, I notify the user and prevent further processing.
- - If no trades exist within the specified time range, I display a message instead of generating an empty file.
+  - I check if the time interval input follows the correct format and alert the user if it's invalid.
+  - If the start or end datetime is missing or incorrect, I notify the user and prevent further processing.
+  - If no trades exist within the specified time range, I display a message instead of generating an empty file.
  
 - Assumptions & Limitations
  - I assume that all timestamps in the dataset are in chronological order; otherwise, sorting is required.
